@@ -1,3 +1,6 @@
+let userChoice;
+let computerChoice;
+
 const getUserChoice = userInput => {
     userInput = userInput.toLowerCase();
     if (userInput === 'rock' || userInput === 'scissors' || userInput === 'paper') {
@@ -43,12 +46,11 @@ const determineWinner = () => {
     }
   }
   const playgame = () => {
-    const userChoice = getUserChoice('scissors');
-    const computerChoice = getComputerChoice();
+    userChoice = getUserChoice(prompt('Rock, Paper, Scissors...'));
+    computerChoice = getComputerChoice();
     console.log('You threw: ' + userChoice);
     console.log('The computer threw: ' + computerChoice);
-
     console.log(determineWinner(userChoice, computerChoice));
  };
- 
- playGame();
+
+ playgame();
